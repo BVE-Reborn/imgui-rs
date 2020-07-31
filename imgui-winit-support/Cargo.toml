@@ -10,10 +10,10 @@ license = "MIT/Apache-2.0"
 categories = ["gui"]
 
 [dependencies]
-imgui = { version = "0.4.0", path = "../" }
+imgui = { version = "0.4.0" }
 winit-19 = { version = ">= 0.16, <= 0.19", package = "winit", optional = true }
 winit-20 = { version = ">= 0.20, <= 0.21", package = "winit", optional = true }
-winit-22 = { version = "0.22", package = "winit", optional = true }
+winit-22 = { package = "winit", git = "https://github.com/rust-windowing/winit.git", rev = "c1ea0dde92e1de9e029e7fbb2485a454aa81b918", default-features = false, optional = true, features = ["x11"] }
 
 [features]
 default = ["winit-22"]
